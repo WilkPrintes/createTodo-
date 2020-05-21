@@ -10,10 +10,13 @@ function renderTodo(){
     listElement.innerHTML = '';
     for (todo of todos){
         var pas = todos.indexOf(todo);
-        var todoElement = document.createElement('li');
+        var todoElement = document.createElement('label');
         var textTodo = document.createTextNode(todo);
         var textLink = document.createTextNode("Excluir");
         var linkElement = document.createElement('button');
+        var brElement = document.createElement("br");
+
+
         linkElement.setAttribute('onclick', 'deleteTodo('+ pas +')')
         linkElement.setAttribute('id', 'excluir')
         var checkElement = document.createElement('input');
@@ -26,6 +29,7 @@ function renderTodo(){
         linkElement.appendChild(textLink);  
         todoElement.appendChild(textTodo);
         todoElement.appendChild(linkElement);
+        todoElement.appendChild(brElement)
         listElement.appendChild(todoElement);
 
 
