@@ -3,13 +3,13 @@
 }
 
 #app{
-    font-size: 60px;
+    font-size: 24px;
     text-align: center;
     text-decoration: none;
     position: relative;
-    height: 500px;
+    height: 1000px;
     margin: 0 auto;
-    width: 500px;
+    width: 1000px;
 }
 
 button{
@@ -35,13 +35,13 @@ button:hover{
 
 #input{
     box-sizing: border-box;
-    width:170px;
-    height: 70px;
+    width:150px;
+    height: 67px;
     
 
 }
-label{
-    font-size: 100px;
+li{
+    text-decoration: none;
 }
 
 ul{
@@ -53,6 +53,9 @@ input{
     text-align: justify;
     position: relative;
 
+
+    
+    
    
 }
 html{
@@ -66,5 +69,4 @@ a{
 h2{
     text-align: center;
     margin-top: 20%;
-    font-size: 30px;
 }
