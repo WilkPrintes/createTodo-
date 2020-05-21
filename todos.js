@@ -2,6 +2,7 @@ var listElement = document.querySelector("#app ul");
 var btnElement = document.querySelector("#app button");
 var inputElement = document.querySelector('#app input');
 var checkboxInput = document.querySelector("#app ul li input");
+var excluirTodos = document.querySelector('#app button[id=excluirTodos]');
 
 var todos = JSON.parse(localStorage.getItem('list_todo')) || [];
 
@@ -12,8 +13,9 @@ function renderTodo(){
         var todoElement = document.createElement('li');
         var textTodo = document.createTextNode(todo);
         var textLink = document.createTextNode("Excluir");
-        var linkElement = document.createElement('a');
+        var linkElement = document.createElement('button');
         linkElement.setAttribute('onclick', 'deleteTodo('+ pas +')')
+        linkElement.setAttribute('id', 'excluir')
         var checkElement = document.createElement('input');
         
         checkElement.setAttribute('type' , 'checkbox');
@@ -30,6 +32,8 @@ function renderTodo(){
     }
 }
 renderTodo();
+
+excluirTodos.onclick = deleteTodos;
 
 function addTodo(){
     textInput = inputElement.value;
@@ -48,7 +52,12 @@ function deleteTodo(pos){
     saveToStorage();
 
 }
+function deleteTodos(){
 
+    todos.splice(0,100);
+    renderTodo(); 
+    saveToStorage();
+}
 function saveToStorage(){
     localStorage.setItem('list_todo', JSON.stringify(todos));   
 }
