@@ -37,10 +37,15 @@ excluirTodos.onclick = deleteTodos;
 
 function addTodo(){
     textInput = inputElement.value;
-    todos.push(textInput)
-    inputElement.value = '';
-    renderTodo();
-    saveToStorage();
+    if (textInput == ''){
+        alert('Digite uma tarefa.')
+    }else{
+        todos.push(textInput)
+        inputElement.value = '';
+        renderTodo();
+        saveToStorage();
+    }
+    
 }
 
 btnElement.onclick = addTodo;
@@ -61,4 +66,5 @@ function deleteTodos(){
 function saveToStorage(){
     localStorage.setItem('list_todo', JSON.stringify(todos));   
 }
+
 

@@ -1,7 +1,7 @@
 #app{
     font-size: 24px;
     text-align: center;
-    
+    text-decoration: none;
 }
 
 button{
@@ -29,21 +29,22 @@ button:hover{
     box-sizing: border-box;
     width:150px;
     height: 67px;
+    
 
 }
 li{
     text-decoration: none;
-    list-style-type: none;
-    text-align: justify;
-    margin-left: 40%;
+}
 
-    
-
+ul{
+    text-decoration: none;
 }
 input{
     width:20px;
     height: 30px;
     text-align: justify;
+    position: relative;
+
 
     
     
@@ -60,7 +61,4 @@ a{
 h2{
     text-align: center;
     margin-top: 20%;
-}
-#excluir{
-    
 }
